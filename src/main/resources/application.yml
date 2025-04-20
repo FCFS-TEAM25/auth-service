@@ -4,6 +4,7 @@ spring:
       - optional:file:.env[.properties]
       - classpath:properties/jwt.yml
       - classpath:properties/eureka-client.yml
+      - classpath:properties/actuator.yml
   application:
     name: auth-service
 server:
