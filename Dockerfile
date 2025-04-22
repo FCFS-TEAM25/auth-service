@@ -1,4 +1,4 @@
-FROM eclipse-temurin:17-jdk as jar_builder
+FROM eclipse-temurin:17-jdk AS jar_builder
 
 COPY . .
 
