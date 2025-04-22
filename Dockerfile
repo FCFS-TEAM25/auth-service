@@ -4,7 +4,7 @@ COPY . .
 
 RUN ./gradlew clean bootJar
 
-FROM eclipse-temurin:17-jdk
+FROM eclipse-temurin:17-jre
 
 COPY --from=jar_builder /build/libs/*jar app.jar
 
