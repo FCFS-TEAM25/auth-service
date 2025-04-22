@@ -1,0 +1,21 @@
+services:
+  auth-service:
+    container_name: auth-service
+    image: chokyuseong/auth-service:latest
+    env_file:
+      - .env
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - '19091:19091'
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+    mem_limit: 1024mb
+    cpus: 0.5
+    networks:
+      - limited-team25
+
+networks:
+  limited-team25:
+    external: true
